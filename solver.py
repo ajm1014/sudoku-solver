@@ -18,3 +18,13 @@ def print_grid(arr):
             print(str(arr[row][col]), end = ' ')
         print()
 
+def check_exists_in_row(arr, row, num):
+    if num in arr[row]:
+        return true
+    return false
+
+def check_exists_in_col(arr, col, num):
+    for row in arr:
+        if row[col] == num:
+            return true
+    return false
