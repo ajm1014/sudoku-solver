@@ -28,3 +28,13 @@ def check_exists_in_col(arr, col, num):
         if row[col] == num:
             return True
     return False
+
+def check_exists_in_square(arr, row, col, num):
+    top_left = [(int(row / 3) * 3), (int(col / 3) * 3)]
+    for row_num in range(top_left[0], (top_left[0] + 3)):
+        for col_num in range(top_left[1], (top_left[1] + 3)):
+            if arr[row_num][col_num] == num:
+                return True
+    return False
+
+print(check_exists_in_square(grid, 2, 5, 3))
