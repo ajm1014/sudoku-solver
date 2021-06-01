@@ -6,4 +6,4 @@ This program takes in a sudoku puzzle and returns the result if it is a valid pu
 
 ## Usage
 
-Update the grid in solver.py to reflect the sudoku board to solve (0 is empty) and run the code. Hopefully someday there will be a GUI to make that process a little bit easier.
+Update the grid in solver.py to reflect the sudoku board to solve (0 is empty) and run the code.
