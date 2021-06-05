@@ -21,6 +21,17 @@ def print_grid(arr):
         print()
 
 
+# Find the next empty cell in the array
+def get_next_blank(arr, cell):
+    for row_num in range(grid_size):
+        for col_num in range(grid_size):
+            if arr[row_num][col_num] == 0:
+                cell[0] = row_num
+                cell[1] = col_num
+                return True
+    return False
+
+
 # Check if a cell in the grid is safe to add a specific number
 def is_safe(arr, row, col, num):
     # Check if the number already exists in the row
@@ -42,15 +53,6 @@ def is_safe(arr, row, col, num):
     # If it is safe, return true
     return True
 
-# Find the next empty cell in the array
-def get_next_blank(arr, cell):
-    for row_num in range(grid_size):
-        for col_num in range(grid_size):
-            if arr[row_num][col_num] == 0:
-                cell[0] = row_num
-                cell[1] = col_num
-                return True
-    return False
 
 # Recursively solve the puzzle using backtracking
 def solve_puzzle(arr):
