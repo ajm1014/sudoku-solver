@@ -99,9 +99,10 @@ function solveBoard(board) {
 
 // Solve the board and print the results
 if (solveBoard(board)) {
-    printBoard(board);
-}
-else {
-    solveBoard(board);
-    console.log("This puzzle cannot be solved.");
+    if (findEmptyCell(board)[0] == -1) {
+        printBoard(board);
+    }
+    else {
+        console.log("This puzzle cannot be solved.");
+    }
 }
